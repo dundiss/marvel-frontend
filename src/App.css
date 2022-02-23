@@ -1,38 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  height: 40px;
+}
+
+nav ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ee171f;
+  border-left: 10px solid #ee171f;
+  width: 150px;
+  font-weight: bold;
+}
+
+nav ul > li > * {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav .menu {
+  display: none;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-search {
+  width: 300px;
+  background-color: #505050;
+  margin-left: 10px;
+  height: 40px;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 60px;
+  /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column;*/
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: fixed;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header,
+.App-page {
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-page {
+  padding-top: 20px;
+  background-color: #909496;
+}
+
+.character {
+  display: flex;
+  margin-left: 20px;
+}
+
+.character:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.character {
+  background-color: darkgray;
+  width: 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.character > img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character > div {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.character > div > h2 {
+  padding-top: 10px;
+}
+.character > div > p,
+.character > div > h2 {
+  text-align: left;
+  padding: 10px;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .App-header,
+  .App-page {
+    padding-left: 5px;
+    padding-right: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  .App-header {
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .App-search {
+    width: 170px;
+    margin-right: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    height: unset;
+  }
+
+  nav ul > li {
+    height: 40px;
+  }
+
+  nav .menu {
+    display: initial;
+    width: 80px;
+    height: 40px;
+  }
+
+  nav .bars {
+    font-size: 60px;
+  }
+
+  .nav-display {
+    display: unset;
+    position: fixed;
+    top: 60px;
+  }
+
+  .nav-hide {
+    display: none;
+  }
+
+  .character {
+    margin-left: 5px;
+    width: 100%;
+    height: 250px;
+  }
+  .character > div > h2 {
+    font-size: 14px;
+    padding: 15px 5px 0 5px;
+  }
+  .character > div > p {
+    font-size: 12px;
+  }
+
+  .character > img {
+    height: unset;
   }
 }
