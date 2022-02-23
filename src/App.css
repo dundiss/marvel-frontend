@@ -52,6 +52,7 @@ nav .menu {
   background-color: #282c34;
   height: 60px;
   /* min-height: 100vh; */
+  width: 100vw;
   display: flex;
   /* flex-direction: column;*/
   align-items: center;
@@ -68,20 +69,22 @@ nav .menu {
 
 .App-page {
   padding-top: 20px;
-  background-color: #909496;
+  /* background-color: #909496; */
+  background-color: #444444;
 }
 
-.character {
+.element {
   display: flex;
   margin-left: 20px;
 }
 
-.character:nth-child(2n + 1) {
+.element:nth-child(2n + 1) {
   flex-direction: row-reverse;
 }
 
-.character {
-  background-color: darkgray;
+.element {
+  /* background-color: darkgray; */
+  background-color: #646464;
   width: 45%;
   padding: 10px;
   box-sizing: border-box;
@@ -89,14 +92,14 @@ nav .menu {
   border-radius: 5px;
 }
 
-.character > img {
-  width: 50%;
+.element > img {
+  width: 30%;
   height: 100%;
   object-fit: cover;
 }
 
-.character > div {
-  width: 50%;
+.element > div {
+  width: 70%;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -104,20 +107,29 @@ nav .menu {
   align-items: center;
 }
 
-.character > div > h2 {
+.element > div > h2 {
   padding-top: 10px;
 }
-.character > div > p,
-.character > div > h2 {
+.element > div > p,
+.element > div > h2 {
   text-align: left;
   padding: 10px;
+  color: white;
 }
 
-.characters {
+.characters,
+.comics {
   display: flex;
   flex-wrap: wrap;
 }
 
+.star-selected {
+  background-color: yellow;
+}
+
+.star-not-selected {
+  background-color: white;
+}
 @media (max-width: 768px) {
   .App-header,
   .App-page {
@@ -163,20 +175,22 @@ nav .menu {
     display: none;
   }
 
-  .character {
+  .element {
     margin-left: 5px;
     width: 100%;
     height: 250px;
   }
-  .character > div > h2 {
-    font-size: 14px;
+  .element > div > h2 {
+    /* font-size: 14px; */
+    font-size: calc(10px + 2vmin);
     padding: 15px 5px 0 5px;
   }
-  .character > div > p {
-    font-size: 12px;
+  .element > div > p {
+    /* font-size: 12px; */
+    font-size: calc(10px + 2vmin);
   }
 
-  .character > img {
+  .element > img {
     height: unset;
   }
 }

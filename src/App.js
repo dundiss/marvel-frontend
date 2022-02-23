@@ -6,8 +6,8 @@ import Comics from "./pages/Comics"
 
 // import FontAwesone
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
-library.add(faMagnifyingGlass, faBars);
+import { faMagnifyingGlass, faBars, faStar } from '@fortawesome/free-solid-svg-icons';
+library.add(faMagnifyingGlass, faBars, faStar);
 
 
 function App() {

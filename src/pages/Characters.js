@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Display from '../components/Display';
 
 const Characters = () => {
     const [data, setData] = useState();
@@ -23,20 +24,8 @@ const Characters = () => {
     return isLoading ? (
         <span>En cours de chargement...</span>
     ) : (
-            <div className="App-page characters">
-            {
-                data.results.map((character, index) => {
-                console.log(character);
-                return (
-                    <div key={index} className="character">
-                        <img src={character.thumbnail.path + "." + character.thumbnail.extension} alt={`character-${index}`}/>
-                        <div>
-                            <h2>{character.name}</h2>
-                            <p>{character.description}</p>
-                        </div>
-                    </div>
-                );
-            })}
+        <div className="App-page characters">
+                <Display results={data.results} typeName={"character"}/>
         </div>
     );
 }

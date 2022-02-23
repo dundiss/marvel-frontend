@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <FontAwesomeIcon icon="magnifyingglass" />
+            <FontAwesomeIcon icon="fa-magnifying-glass" />
             <input
                 className="App-search"
                 type="text"
