@@ -115,6 +115,7 @@ nav .menu {
   text-align: left;
   padding: 10px;
   color: white;
+  font-size: calc(10px + 1vmin);
 }
 
 .characters,
@@ -124,12 +125,13 @@ nav .menu {
 }
 
 .star-selected {
-  background-color: yellow;
+  color: yellow;
 }
 
 .star-not-selected {
-  background-color: white;
+  color: white;
 }
+
 @media (max-width: 768px) {
   .App-header,
   .App-page {
@@ -178,16 +180,23 @@ nav .menu {
   .element {
     margin-left: 5px;
     width: 100%;
-    height: 250px;
+    height: 270px;
+  }
+  .element > img {
+    width: 40%;
+  }
+
+  .element > div {
+    width: 60%;
   }
   .element > div > h2 {
     /* font-size: 14px; */
     font-size: calc(10px + 2vmin);
-    padding: 15px 5px 0 5px;
+    padding: 10px 5px 0 5px;
   }
   .element > div > p {
     /* font-size: 12px; */
-    font-size: calc(10px + 2vmin);
+    font-size: calc(10px + 1vmin);
   }
 
   .element > img {

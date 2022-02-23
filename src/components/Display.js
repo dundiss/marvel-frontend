@@ -16,7 +16,7 @@ const Display = ({ results, typeName }) => {
                             <div>
                                 {element.name ? <h2>{element.name}</h2> : element.title && <h2>{element.title}</h2>}
                                 <p>{element.description}</p>
-                                <FontAwesomeIcon className={favorites[element._id] ? "star-selected" : "star-not-selected"} icon="star"
+                                <FontAwesomeIcon className={(favorites && favorites[element._id]) ? "star-selected" : "star-not-selected"} icon="star"
                                     onClick={() => {
                                         const copyFavorites = { ...favorites };
                                         if (copyFavorites[element._id]) {
