@@ -70,7 +70,7 @@ nav .menu {
 .App-page {
   padding-top: 20px;
   /* background-color: #909496; */
-  background-color: #444444;
+  background-color: #27262b;
 }
 
 .element {
@@ -84,7 +84,7 @@ nav .menu {
 
 .element {
   /* background-color: darkgray; */
-  background-color: #646464;
+  background-color: #141414;
   width: 45%;
   padding: 10px;
   box-sizing: border-box;
@@ -184,6 +184,7 @@ nav .menu {
   }
   .element > img {
     width: 40%;
+    height: unset;
   }
 
   .element > div {
@@ -199,7 +200,7 @@ nav .menu {
     font-size: calc(10px + 1vmin);
   }
 
-  .element > img {
-    height: unset;
+  .comic {
+    height: 300px;
   }
 }
