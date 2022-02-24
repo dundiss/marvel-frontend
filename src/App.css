@@ -59,6 +59,7 @@ nav .menu {
   font-size: calc(10px + 2vmin);
   color: white;
   position: fixed;
+  z-index: 1;
 }
 
 .App-header,
@@ -71,6 +72,8 @@ nav .menu {
   padding-top: 20px;
   /* background-color: #909496; */
   background-color: #27262b;
+  top: 60px;
+  position: absolute;
 }
 
 .element {
