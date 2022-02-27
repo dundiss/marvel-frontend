@@ -36,7 +36,7 @@ const Favorites = ({ favorites, setFavorites, setShowLogin}) => {
             }
         };
         fetchData();
-    }, [favorites]);
+    }, [favorites, setShowLogin]);
 
     return isLoading ? (
         <span>En cours de chargement...</span>

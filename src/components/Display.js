@@ -10,7 +10,7 @@ const Display = ({ setShowLogin, results, favorites, setFavorites }) => {
     useEffect(() => {
         
         
-    }, [favorites]);
+    }, [favorites, setShowLogin]);
 
     const getCategory = (element)=>{
         let category = "character"

@@ -39,7 +39,7 @@ const Character = ({ setShowLogin, favorites, setFavorites }) => {
             }
         };
         fetchData();
-    }, []);
+    }, [setShowLogin]);
 
     return isLoading ? (
         <span>En cours de chargement...</span>
