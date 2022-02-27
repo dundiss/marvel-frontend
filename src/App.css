@@ -1,14 +1,22 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Cambria Cochin Georgia Times';
 }
 
-nav ul {
+.App-header,
+.App-page {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.bars-buttons ul {
   display: flex;
   height: 40px;
+  padding-right: 120px;
 }
 
-nav ul > li {
+.bars-buttons ul > li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,15 +28,24 @@ nav ul > li {
   border-left: 10px solid #ee171f;
   width: 150px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-nav ul > li > * {
+.bars-buttons ul > li .menu-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bars-buttons ul > li > * {
   color: black;
   text-decoration: none;
   text-align: center;
 }
 
-nav .menu {
+.bars-buttons .menu {
   display: none;
 }
 
@@ -41,39 +58,58 @@ nav .menu {
   pointer-events: none;
 }
 
-.App-search {
-  width: 300px;
-  background-color: #505050;
-  margin-left: 10px;
-  height: 40px;
-}
-
 .App-header {
   background-color: #282c34;
   height: 60px;
   /* min-height: 100vh; */
-  width: 100vw;
+  width: 100%;
   display: flex;
-  /* flex-direction: column;*/
+  justify-content: space-between;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
   position: fixed;
   z-index: 1;
 }
 
-.App-header,
-.App-page {
-  padding-left: 120px;
+.bars-buttons {
+  display: flex;
+  align-items: center;
   padding-right: 120px;
+  box-sizing: border-box;
 }
 
 .App-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 20px;
   /* background-color: #909496; */
-  background-color: #27262b;
+  /* background-color: #27262b; */
+  background-color: #1d1e22;
   top: 60px;
   position: absolute;
+  z-index: 0;
+}
+
+.App-page .pagination {
+  width: 100%;
+}
+
+.App-page .pagination > button {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ee171f;
+  border-left: 10px solid #ee171f;
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.App-page .pagination > button:last-child {
+  margin-left: 10px;
 }
 
 .element {
@@ -87,38 +123,43 @@ nav .menu {
 
 .element {
   /* background-color: darkgray; */
-  background-color: #141414;
+  /* background-color: #282c34; */
+  background-color: #27262b;
   width: 45%;
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  align-items: center;
 }
 
 .element > img {
-  width: 30%;
+  width: 40%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .element > div {
   width: 70%;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.element > div > h2 {
-  padding-top: 10px;
-}
 .element > div > p,
 .element > div > h2 {
   text-align: left;
   padding: 10px;
   color: white;
-  font-size: calc(10px + 1vmin);
+  font-size: 14px;
+}
+
+.element > div > h2 {
+  color: #e0e0e0;
+  font-size: 16px;
 }
 
 .characters,
@@ -129,11 +170,175 @@ nav .menu {
 
 .star-selected {
   color: yellow;
+  cursor: pointer;
 }
 
 .star-not-selected {
   color: white;
+  cursor: pointer;
 }
+
+.search-characters,
+.search-comics {
+  background-color: #505050;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  width: 60%;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/*Character */
+.character-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.character-info .character {
+  width: 100%;
+}
+
+.character-comics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.character-info .character > .character {
+  width: 92%;
+  height: 400px;
+}
+
+.character-info .character > .character img {
+  width: 100%;
+}
+
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*End Character*/
+
+/*SIGNUP LOGIN*/
+/* Bouton servant à fermer la fenêtre modale */
+.closebtn {
+  text-decoration: none;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .container {
+  padding: 2px 16px;
+} */
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 60px;
+  /* top: 50%; */
+  left: 3%;
+  /* background-color: #717171; */
+  background-color: #28272f;
+}
+
+.modal-content > .container-signup,
+.modal-content > .container-login {
+  margin-left: 0px;
+  width: 100%;
+  background-color: #232c34;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 50px;
+}
+
+.modal-content > .container-signup h2,
+.modal-content > .container-login h2 {
+  padding-left: 10px;
+  padding-top: 5px;
+  flex: 10;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.modal-content form > input {
+  width: 300px;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.07);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.modal-content form > input:not(:last-child) {
+  border: none;
+  border-bottom: 1px solid tomato;
+  margin-bottom: 10px;
+}
+
+.modal-content form > input:last-child {
+  background-color: var(--appGreenColor);
+  color: white;
+  border-color: var(--appGreenColor);
+}
+
+.modal-content form .terms {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px 0;
+}
+
+.modal-content form .terms span {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.modal-content .already-signup,
+.modal-content .signup {
+  text-decoration: none;
+  color: var(--appGreenColor);
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.modal-content > span {
+  color: white;
+}
+
+#newsletter:checked {
+  background-color: var(--appGreenColor);
+}
+/*END SIGNUP LOGIN*/
 
 @media (max-width: 768px) {
   .App-header,
