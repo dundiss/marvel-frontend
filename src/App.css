@@ -391,7 +391,7 @@
   .element {
     margin-left: 5px;
     width: 100%;
-    height: 270px;
+    height: auto;
   }
   .element > img {
     width: 40%;
