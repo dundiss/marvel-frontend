@@ -142,7 +142,7 @@
 
 .element > div {
   width: 70%;
-  height: auto;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -413,5 +413,21 @@
 
   .comic {
     height: 300px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .App-header {
+    padding-left: 400px;
+    padding-right: 400px;
+  }
+  .App-page {
+    padding-left: 400px;
+    padding-right: 400px;
+  }
+
+  .bars-buttons,
+  .bars-buttons ul {
+    padding-right: 400px;
   }
 }
