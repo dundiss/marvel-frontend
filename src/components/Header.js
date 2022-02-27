@@ -16,6 +16,7 @@ const Header = ({showLogin, setShowLogin}) => {
     const navigate = useNavigate();
 
     const handleOnClickLogin = () => {
+        setDisplayNav(!displayNav);
         if (showSignup) {
             setShowSignup(false);
         }
@@ -35,6 +36,7 @@ const Header = ({showLogin, setShowLogin}) => {
     }
 
     const handleOnClickSignup = () => {
+        setDisplayNav(!displayNav);
         if (showLogin) {
             setShowLogin(false);
         }
@@ -45,7 +47,7 @@ const Header = ({showLogin, setShowLogin}) => {
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <div className="bars-buttons">
-                    <FontAwesomeIcon className="menu" icon="bars" onClick={() => setDisplayNav(!displayNav)} />
+                    <FontAwesomeIcon className="menu" icon={displayNav ? "xmark" : "bars"} onClick={() => setDisplayNav(!displayNav)} />
                     <nav className={displayNav ? "nav-display" : "nav-hide"}>
 
                         <ul>

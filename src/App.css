@@ -142,7 +142,7 @@
 
 .element > div {
   width: 70%;
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,32 +346,34 @@
     padding-left: 5px;
     padding-right: 5px;
   }
+
   .App-header {
-    flex-wrap: wrap;
     width: 100vw;
   }
 
-  .App-search {
-    width: 170px;
-    margin-right: 10px;
+  .bars-buttons {
+    flex-direction: row-reverse;
+    width: 60px;
   }
 
-  nav ul {
+  .bars-buttons ul {
     flex-direction: column;
     height: unset;
   }
 
-  nav ul > li {
+  .bars-buttons ul > li {
     height: 40px;
   }
 
-  nav .menu {
+  .bars-buttons .menu {
     display: initial;
     width: 80px;
     height: 40px;
+    position: absolute;
+    right: 1%;
   }
 
-  nav .bars {
+  .bars-buttons .bars {
     font-size: 60px;
   }
 
@@ -379,6 +381,7 @@
     display: unset;
     position: fixed;
     top: 60px;
+    left: 0;
   }
 
   .nav-hide {

@@ -7,9 +7,9 @@ import Comics from "./pages/Comics"
 import { useState } from 'react';
 // import FontAwesone
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMagnifyingGlass, faBars, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faBars, faXmark, faStar } from '@fortawesome/free-solid-svg-icons';
 import Favorites from './pages/Favorites';
-library.add(faMagnifyingGlass, faBars, faStar);
+library.add(faMagnifyingGlass, faBars, faXmark, faStar);
 
 
 function App() {
