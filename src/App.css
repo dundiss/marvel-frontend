@@ -429,6 +429,11 @@
     width: 100%;
   }
 
+  .character-info > .character-comics .element > div {
+    min-height: 100px;
+    width: 100%;
+  }
+
   .character-info .character {
     width: 100%;
     flex-direction: column;
