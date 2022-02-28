@@ -406,6 +406,10 @@
     height: auto;
   }
 
+  .characters .element > div {
+    min-height: 200px;
+  }
+
   .element > div > h2 {
     /* font-size: 14px; */
     font-size: calc(10px + 2vmin);
@@ -420,6 +424,11 @@
     min-height: 200px;
   }
 
+  .character-info > .element > div {
+    min-height: 100px;
+    width: 100%;
+  }
+
   .character-info .character {
     width: 100%;
     flex-direction: column;
@@ -427,10 +436,6 @@
 
   .character-info .character img {
     height: unset;
-    width: 100%;
-  }
-
-  .character-info .character div {
     width: 100%;
   }
 }
