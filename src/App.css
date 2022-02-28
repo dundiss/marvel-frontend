@@ -210,7 +210,7 @@
 }
 .character-info .character > .character {
   width: 92%;
-  height: 400px;
+  height: auto;
 }
 
 .character-info .character > .character img {
@@ -401,6 +401,15 @@
   .element > div {
     width: 60%;
   }
+
+  /* .comics element {
+    height: auto;
+  } */
+  .comics .element > div {
+    min-height: unset;
+    height: auto;
+  }
+
   .element > div > h2 {
     /* font-size: 14px; */
     font-size: calc(10px + 2vmin);
@@ -412,11 +421,21 @@
   }
 
   .comic {
-    height: 300px;
+    height: auto;
+  }
+
+  .character-info .character {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .character-info .character img {
+    height: unset;
+    width: 100%;
   }
 }
 
-@media (min-width: 1280px) {
+/* @media (max-width: 1280px) {
   .App-header {
     padding-left: 400px;
     padding-right: 400px;
@@ -430,4 +449,4 @@
   .bars-buttons ul {
     padding-right: 400px;
   }
-}
+} */
