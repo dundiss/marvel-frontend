@@ -192,8 +192,7 @@
 /*Character */
 .character-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
 }
 .character-info .character {
   width: 92%;
@@ -402,9 +401,6 @@
     width: 60%;
   }
 
-  /* .comics element {
-    height: auto;
-  } */
   .comics .element > div {
     min-height: unset;
     height: auto;
@@ -421,7 +417,7 @@
   }
 
   .comic {
-    height: auto;
+    min-height: 200px;
   }
 
   .character-info .character {
@@ -431,6 +427,10 @@
 
   .character-info .character img {
     height: unset;
+    width: 100%;
+  }
+
+  .character-info .character div {
     width: 100%;
   }
 }
